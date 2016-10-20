@@ -9,19 +9,23 @@
             color: #{{ $app_info->data->app_setting->title_color}};
             background-color: #{{ $app_info->data->app_setting->header_color}};
             ">メニュー</h1>
-            <a href="javascript:void(0)" class="h_control-nav">
+            <!-- <a href="javascript:void(0)" class="h_control-nav">
                 <img src="{{ url('img/icon/h_nav.png') }}" alt="nav"/>
+            </a> -->
+            <a href="{{URL::previous()}}">
+                <img src="{{ url('img/icon/h_back-arrow.jpg') }}" alt="arrow"/>
             </a>
         </div>
     </div><!-- End header -->
     <div id="main">
         <div id="content">
+            <!--
             <div id="category">
-                <!-- Slider main container -->
+                <!-- Slider main container --
                 <div class="swiper-container">
-                    <!-- Additional required wrapper -->
+                    <!-- Additional required wrapper --
                     <div class="swiper-wrapper">
-                        <!-- Slides -->
+                        <!-- Slides --
                         @if(count($menus_data) > 0)
                             @foreach($menus_data as $item)
                                 <div class="swiper-slide" data-id="{{$item->id}}">{{$item->name}}</div>
@@ -29,11 +33,12 @@
                         @endif
                     </div>
 
-                    <!-- If we need navigation buttons -->
+                    <!-- If we need navigation buttons --
                     <div class="swiper-button-prev"></div>
                     <div class="swiper-button-next"></div>
                 </div>
-            </div><!-- End category -->
+            </div><!-- End category --
+            -->
             <div id="category-detail">
                 <form id="myform" method="post" action="">
                     <input type="hidden" id="current_page" value="{{$page_number}}">

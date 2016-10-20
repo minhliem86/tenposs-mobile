@@ -33,33 +33,31 @@
     @endif
     <div id="main">
         <div id="content">
-            <div class="container-fluid">
+            <div class="wrap-coupon-detail">
                 @if(count($items_detail_data) > 0)
                     <div class="infodetail">
-                        <div class="container-fluid">
-                            <p><span>ID: {{$items_detail_data->id}}</span> . <a
-                                        href="javascrip:void(0)"> @if(array_key_exists('coupon_type',$items_detail_data))
-                                        {{$items_detail_data->coupon_type->name}}
-                                    @else
-                                        空の入力
-                                    @endif</a></p>
-                            <h3>{{$items_detail_data->title}}</h3>
-                            <span class="dateadd">有効期間: {{$items_detail_data->end_date}}</span>
-                        </div>
-                        <div class="form-mail">
-                            <div class="input-group">
-                                @if(array_key_exists('taglist',$items_detail_data) && count($items_detail_data->taglist) > 0)
-                                    <?php $ls_tag = '';?>
-                                    @foreach($items_detail_data->taglist as $item)
-                                        <?php $ls_tag .= $item . ',';?>
-                                    @endforeach
-                                    <?php $ls_tag = rtrim($ls_tag, ",");?>
-                                @endif
-                                <input style="text-align: center;" type="text" class="form-control" id="target_copy" value="{{$ls_tag}}"
-                                       placeholder="ハッシュタグ">
+                        <span>ID: {{$items_detail_data->id}}</span> . <a
+                                    href="javascrip:void(0)"> @if(array_key_exists('coupon_type',$items_detail_data))
+                                    {{$items_detail_data->coupon_type->name}}
+                                @else
+                                    空の入力
+                                @endif</a>
+                        <h3 class="title-coupon">{{$items_detail_data->title}}</h3>
+                        <span class="dateadd">有効期間: {{$items_detail_data->end_date}}</span>
+                    </div>
+                    <div class="form-mail">
+                        <div class="input-group">
+                            @if(array_key_exists('taglist',$items_detail_data) && count($items_detail_data->taglist) > 0)
+                                <?php $ls_tag = '';?>
+                                @foreach($items_detail_data->taglist as $item)
+                                    <?php $ls_tag .= $item . ',';?>
+                                @endforeach
+                                <?php $ls_tag = rtrim($ls_tag, ",");?>
+                            @endif
+                            <input style="text-align: center;" type="text" class="form-control" id="target_copy" value="{{$ls_tag}}"
+                                   placeholder="ハッシュタグ">
 
-                                <div class="input-group-addon" style="cursor: pointer;"><a  href="javascipt:void(0)" id="copy_hashtag">コピー</a>
-                                </div>
+                            <div class="input-group-addon" style="cursor: pointer;"><a  href="javascipt:void(0)" id="copy_hashtag">コピー</a>
                             </div>
                         </div>
                     </div>

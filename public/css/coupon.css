@@ -22,6 +22,8 @@
 }
 
 /* Coupon Detail */
+
+
 .notication {
     position: fixed;
     top: 0;
@@ -45,10 +47,70 @@
 .notication .noti_inside p {
     color: #fff;
 }
-
-.infodetail, .entrydetail {
-    padding: 40px 0;
+.wrap-coupon-detail{
+    padding:40px 30px 50px;
 }
+.wrap-coupon-detail .infodetail{
+    padding:0px 20px  ;
+    margin-bottom:70px;
+}
+
+.wrap-coupon-detail .form-mail {
+    padding-bottom:75px;
+    border-bottom:1px solid #ccc;
+}
+@media screen and (max-width:479px){
+    .wrap-coupon-detail.form-mail{
+         margin: 30px 0 10px;
+    }
+}
+
+.wrap-coupon-detail .form-mail .input-group{
+    border:none;
+}
+.wrap-coupon-detail .form-mail .form-control {
+    font-size: 24px;
+    line-height: 70px;
+    height: 70px;
+    background:#f4f4f4;
+    border:none;
+
+}
+@media screen and (max-width: 479px){
+    .wrap-coupon-detail .form-mail .form-control{
+        height: 50px;
+        line-height: 50px;
+        font-size: 18px;
+    }
+}
+
+.wrap-coupon-detail .form-mail .input-group-addon {
+    font-size: 24px;
+    min-width: 160px;
+    text-align: center;
+    background: #14c8c8;
+    color: #fff;
+    border:none;
+}
+
+@media screen and (max-width:479px){
+     .wrap-coupon-detail .form-mail .input-group-addon {
+        font-size:18px;
+        min-width: auto;
+    }
+}
+.wrap-coupon-detail .form-mail a {
+    color: #fff;
+}
+.wrap-coupon-detail .entrydetail{
+    padding:15px 20px;
+}
+
+
+.infodetail {
+    padding: 40px 30px;
+}
+
 @media screen and (max-width:479px){
     .infodetail, .entrydetail {
         padding:20px 0;
@@ -60,12 +122,16 @@
 }
 
 .infodetail {
-    border-bottom: 1px solid #ddd;
+    /*border-bottom: 1px solid #ddd;*/
     position: relative;
+}
+.infodetail h3.title-coupon {
+    margin:0;
+    margin-bottom:10px;
 }
 
 .infodetail .wrap-title-detail h3 {
-    margin: 10px 0;
+    margin:0;
     width:70%;
     display:inline-block;
     vertical-align: middle;
@@ -89,7 +155,7 @@
 .infodetail .wrap-title-detail .news-dateadd{
     display:inline-block;
     width:29%;
-    vertical-align: middle;
+    vertical-align: top;
     color: #96a0a4;
     text-align: right;
 }
@@ -107,44 +173,12 @@
     }
 }
 
-.infodetail .form-mail {
-    margin: 60px 0 10px;
-}
 
-.infodetail .form-mail .form-control {
-    font-size: 24px;
-    line-height: 70px;
-    height: 70px;
-}
-@media screen and (max-width: 479px){
-    .infodetail .form-mail .form-control{
-        height: 50px;
-        line-height: 50px;
-        font-size: 18px;
-    }
-}
-
-.infodetail .form-mail .input-group-addon {
-    font-size: 24px;
-    min-width: 160px;
-    text-align: center;
-    background: #14c8c8;
-    color: #fff;
-}
-
-@media screen and (max-width:479px){
-    .infodetail .form-mail .input-group-addon {
-        font-size:18px;
-        min-width: auto;
-    }
-}
-.infodetail .form-mail a {
-    color: #fff;
-}
 
 #below-content {
     padding-bottom: 100px;
-    width: inherit;
+    width: 100%;
+    position: relative;
 }
 
 #below-content p {
@@ -164,22 +198,33 @@
     font-size: 16px;
 }
 
+#below-content-disable{
+    width:100%;
+    position:relative;
+}
+
 #below-content-disable p {
-    position: fixed;
+    position: absolute;
     bottom: 0;
     width: 100%;
     padding: 20px;
     text-align: center;
-    background: #14c8c8;
+    background: #ccc;
     color: #fff;
     font-size: 20px;
     margin-bottom: 0;
     z-index: 999;
 }
-
-#page, #below-content-disable, #below-content-disable p {
-    width: inherit;
+@media screen and (max-width:479px){
+    #below-content-disable p{
+        font-size:14px;
+    }
 }
+
+
+/*#page, #below-content-disable, #below-content-disable p {
+    width: inherit;
+}*/
 
 #page, #below-content, #below-content p {
     width: inherit;

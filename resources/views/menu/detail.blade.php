@@ -19,19 +19,17 @@
         <div id="content">
             @if(count($items_detail_data) > 0)
                 <img class="image_size_detail" src="{{$items_detail_data->image_url}}" alt="{{$items_detail_data->title}}"/>
-                <div class="container-fluid">
+                <div class="wrap-menu-detail">
                     <div class="info-productdetail">
-                        <div class="container-fluid">
-                            <span>ID: {{$items_detail_data->id}}</span>
+                        <span>ID: {{$items_detail_data->id}}</span>
+                        <div class="wrap-title-price">
                             <p class="font32"><strong>{{$items_detail_data->title}}</strong></p>
                             <span class="price">$ {{number_format($items_detail_data->price, 0, '', '.')}}</span>
                         </div>
-                        <a href="{{$items_detail_data->item_link}}" class="btn pad20 tenposs-button">商品購入ペ一ジへ</a>
                     </div>
+                    <a href="{{$items_detail_data->item_link}}" class="btn pad20 tenposs-button">商品購入ペ一ジへ</a>
                     <div class="entry-productdetail">
                         <div class="option">
-                            {{--<span class="btn switch switch-on" alt="tab1">説明</span>--}}
-                            {{--<span class="btn switch switch-off"  alt="tab2">サイズ</span>--}}
                             <ul class="nav nav-tabs" id="myTab">
                                 <li class="active"><a href="#tab1">説明</a></li>
                                 <li><a href="#tab2">サイズ</a></li>
@@ -85,7 +83,7 @@
                             {{--<a href="{{$items_detail_data->item_link}}" class="btn pad20 tenposs-button">もっと見る</a>--}}
                         {{--</div>--}}
                     </div>
-                </div><!-- End container fluid -->
+                </div><!-- End wrap-menu-detail -->
             @else
                 <div class="container-fluid" style="text-align: center;">
                     <p>データなし</p>

@@ -1,10 +1,14 @@
 <div id="side">
     <div class="h_side">
-        <div class="imageleft">
+        <div class="imageleft clearfix">
             @if( Session::has('user') )
             <div class="image">
                 <a href="{{ route('profile') }}">
+                    @if(Session::get('user')->profile->avatar_url)
                     <img class="img-circle" src="{{ Session::get('user')->profile->avatar_url }}" alt=""/>
+                    @else
+                    <img class="img-circle" src="{{ url('/img/tkNdnb1.jpg') }}" alt=""/>
+                    @endif
                 </a>
             </div>
             <p class="font32">{{ Session::get('user')->profile->name }}</p>

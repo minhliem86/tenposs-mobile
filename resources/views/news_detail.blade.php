@@ -23,14 +23,11 @@
             <div class="container-fluid">
                 @if(isset($detail))
                 <div class="infodetail">
-                    <div class="container-fluid">
-                        <p><a href="javascrip:void(0)">{{$detail->data->news->title}}</a></p>
-                        <div class="wrap-title-detail">
-                            <!-- <h3>{{$detail->data->news->title}}</h3> -->
-                            <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h3>
-                            <span class="news-dateadd">{{$detail->data->news->date}}</span>
-                        </div>
-                        
+                    <a href="javascrip:void(0)">{{$detail->data->news->title}}</a>
+                    <div class="wrap-title-detail">
+                        <!-- <h3>{{$detail->data->news->title}}</h3> -->
+                        <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h3>
+                        <span class="news-dateadd">{{$detail->data->news->date}}</span>
                     </div>
                 </div>
                 <div class="entrydetail justify">
